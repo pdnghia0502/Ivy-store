@@ -1,0 +1,211 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgb(255, 255, 255, 0.3);
+}
+header.sticky {
+    background: rgb(255, 255, 255, 1);
+}
+header:hover {
+    background: rgb(255, 255, 255, 1);
+}
+.logo {
+    flex:1;
+}
+.menu {
+    flex: 3;
+    display: flex;
+}
+.menu > li {
+    padding: 0 25px;
+    position: relative;
+    z-index: 1;
+}
+.menu > li:hover .sub-menu {
+    visibility: visible;
+    top: 30px;
+}
+.menu li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 30px;
+    color: #000000;
+}
+.sub-menu {
+    position: absolute;
+    width: 170px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    background-color: white;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.15s;
+
+}
+.sub-menu > li {
+   padding-bottom: 10px;
+}
+.sub-menu ul {
+    padding-left: 20px;
+}
+.sub-menu li ul li a {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.others {
+    flex: 1;
+    display: flex;
+}
+.others > li {
+    padding: 0 12px;
+    
+}
+.others > li:nth-child(-n+3) {
+    border-right: 1px solid black;
+}
+.others > li > a {
+    color: #333;
+    margin-top: 3px;
+}
+.others > li:first-child {
+    position: relative;
+}
+.others > li:first-child input {
+    height: 25px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 15px;
+}
+#Slides {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}
+  
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+}
+.dot-container {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #333;
+}
+/*---------------app--------------*/
+.app-container {
+    text-align: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+.app-google {
+    margin: 20px;
+}
+.app-google img {
+    height: 50px;
+}
+.app-container p {
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.app-container input {
+    border: none;
+    border-bottom: 1px solid #333;
+    margin-top: 10px;
+    height: 30px;
+    width: 400px;
+    text-align: center;
+    background: transparent;
+    outline: none;
+}
+.footer-top {
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+}
+.footer-top p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.footer-top p span {
+    font-weight: bold;
+}
+.footer-img a {
+    margin-left: 10px;
+}
+.footer-text a {
+    margin: 35px 0 25px 0;
+    display: inline-block;
+    color: #333;
+    padding: 0 10px 0 10px;
+}
+.footer-text a:nth-child(-n+2) {
+    border-right: 1px solid black;
+}
+.footer-top li a {
+    padding: 10px 10px 10px 10px;
+    font-size: 25px;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
